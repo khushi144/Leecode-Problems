@@ -1,0 +1,22 @@
+# Leecode-Problems
+basically there is solution of leetcode problems in java 
+
+
+class Solution {
+    public int numIdenticalPairs(int[] nums) {
+        //calculate frequency of array
+        int[] count = new int[120];
+        for(int num:nums){
+            count[num]++;
+            
+        }
+        int total_count= 0;
+        //calculate the total number of pairs possible
+        for(int i : count){
+            total_count += ((i)*(i-1)/2);
+            
+        }
+        return total_count;
+        
+    }
+}
