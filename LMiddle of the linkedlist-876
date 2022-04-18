@@ -1,0 +1,23 @@
+# Leecode-Problems
+basically there is solution of leetcode problems in java 
+
+// take two pointers slow let be x
+// and fast be of 2x 
+
+
+
+
+class Solution{
+public ListNode middleNode(ListNode head) {
+		if(head.next == null)
+            return head;
+    ListNode slow = head;
+    ListNode fast = head;
+    
+    while(fast != null && fast.next != null){
+        fast = fast.next.next;
+        slow = slow.next;
+    }
+    return slow;
+	}
+}
